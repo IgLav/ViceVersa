@@ -1,6 +1,6 @@
 <h1>Igor</h1>
-<textarea rows = '10' cols = '40' placeholder="lalalala"></textarea>
-<br>
-<br>
-<button>Тык!</button>
-
+<form action="{% url 'reverse'%}">
+    <textarea cols="50" rows="10" name="usertext"></textarea>
+    <br><br>
+    <input type="submit" value="Reverse!">
+</form>

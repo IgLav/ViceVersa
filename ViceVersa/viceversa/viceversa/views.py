@@ -11,3 +11,10 @@ def home(request):
                                          'about' : 'This is about',
                                          'Wow': 'Look!',
                                          'lol': a})
+
+def reverse(request):
+    user_text = request.GET['usertext']
+    reversed_text= user_text[::-1]
+    words_count = len(user_text.split())
+    return render(request, 'reverse.html', {'usertext':user_text, 'reversedtext': reversed_text,
+                                            'wordscount': words_count})
